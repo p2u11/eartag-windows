@@ -57,7 +57,7 @@ msgstr ""
 
 #: data/app.drey.EarTag.metainfo.xml.in:77
 msgid "Edit tags of MP3, WAV, M4A, FLAC, OGG and WMA files"
-msgstr "Editatz las etiquetas dels fichièrs P3, WAV, M4A, FLAC, OGG e WMA"
+msgstr "Editatz las etiquetas dels fichièrs MP3, WAV, M4A, FLAC, OGG e WMA"
 
 #: data/app.drey.EarTag.metainfo.xml.in:78
 msgid "Modify metadata of multiple files at once"
