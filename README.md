@@ -22,7 +22,6 @@ The output file `eartag-devel.py` was modified to add environment variables.
 ```py
 # line 20
 #...
-localedir = 'C:/msys64/tmp/eartag/share/locale'
 
 if getattr(sys, 'frozen', False):
     bundle_dir = sys._MEIPASS if hasattr(sys, '_MEIPASS') else os.path.dirname(sys.executable)
@@ -41,15 +40,14 @@ if getattr(sys, 'frozen', False):
         os.add_dll_directory(_internal)
         os.add_dll_directory(bundle_dir)
 
+     pkgdatadir = os.path.join(bundle_dir, 'share', 'eartag')
+     localedir = os.path.join(bundle_dir, 'share', 'locale')
+else:
+    raise RuntimeError("This script is only meant to be run as a bundled executable.")
+
 sys.path.insert(1, pkgdatadir)
 #...
 ```
-
-## Installing
-
-Ear Tag is available on [Flathub](https://flathub.org/apps/details/app.drey.EarTag), as well as the following software repositories:
-
-[![Packaging status](https://repology.org/badge/vertical-allrepos/eartag.svg)](https://repology.org/project/eartag/versions)
 
 ## Dependencies
 
