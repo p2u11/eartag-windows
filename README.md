@@ -8,7 +8,7 @@
 
 Small and simple audio file tag editor, on Windows.
 
-![Screenshot](data/screenshot-scaled.png)
+![Screenshot](data/screenshot-windows.png)
 
 ## About
 
