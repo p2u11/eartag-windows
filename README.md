@@ -89,21 +89,19 @@ Then, install `pyinstaller` to convert all of it to a single EXE:
 pip install pyinstaller --break-system-packages
 ```
 
-Now, make an EXE with this command: (replace `C:/msys64/mingw64/` with your MSYS2 installation path)
+Now, make an EXE with this command: (replace `C:/msys64/mingw64/` with your MSYS2 installation path, you can get the SVG icon in `data` folder and then convert to ICO, or just remove that line)
 ```
-pyinstaller \
-  --noconfirm \
-  --clean \
-  --onefile \
-  --noconsole \
+pyinstaller --noconfirm --clean --onedir --noconsole \
+  --icon="app.drey.EarTag.Devel.ico" \
   --collect-submodules aiofiles \
-  --collect-all gi \
-  --collect-all xxhash \
   --collect-submodules PIL \
-  --collect-all filetype \
-  --collect-all mutagen \
+  --collect-all gi \
+  --collect-submodules xxhash \
+  --collect-submodules filetype \
+  --collect-submodules mutagen \
   --collect-all uuid \
   --add-data "C:/msys64/mingw64/lib/girepository-1.0;girepository-1.0" \
+  --add-data "C:/msys64/tmp/eartag/share/eartag;share/eartag" \
   --add-data "build/compiled_schemas;share/glib-2.0/schemas" \
   --add-data "C:/msys64/mingw64/share/icons;share/icons" \
   --add-binary "C:/msys64/mingw64/bin/libadwaita-1-0.dll;." \
@@ -112,5 +110,5 @@ pyinstaller \
   eartag-devel.py
 ```
 
-At the end you're supposed to have a eartag-devel.exe file in `dist/` folder!
+At the end you're supposed to have a eartag-devel folder in `dist/` folder!
 
